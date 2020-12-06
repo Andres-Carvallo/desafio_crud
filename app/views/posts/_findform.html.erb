@@ -1,0 +1,7 @@
+<div class="container text-center mb-5">
+    <%= form_tag(posts_path, method: 'get') do %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Search", :name => nil %>
+    
+    <% end %>
+</div>

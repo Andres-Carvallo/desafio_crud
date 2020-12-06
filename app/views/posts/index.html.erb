@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+<%= render 'findform' %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="my_posts">
+    <% @posts.each do |post| %>
+    <%= render '/posts/postlist', post: post%>
+
+    <% end %>
+  </tbody>
+    <div id="modal-container">
+    </div>
+
+  <%= render 'form', post: @post %>
+   
+  
+</table>
+<div id="edit_post_container"></div> 
+<br>
+
+<%= link_to 'New Post', new_post_path %>
